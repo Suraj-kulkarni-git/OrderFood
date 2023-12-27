@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(255 219 200);
+
+}
+
+li{
+    list-style: none;   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+header{
+    position: relative;
+    padding: 0 0rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ff7171;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 1000;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 8rem;
+}
+
+.navbar .toggle_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 6opx;
+    height: 0;
+    width: 300px;
+    background: rgb(247, 176, 132);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s;
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+
+.first_page{
+    display: flex;
+}
+.uleft_section{
+    width: 50vw;
+    padding-top: 10rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.uleft_section h1{
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+}
+
+.uleft_section p{
+    padding-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.uleft_section button{
+    margin-top: 6rem;
+    background-color: #ff7171;
+    color: white;
+    font-size: 16px;
+    padding: 1rem 5rem;
+    text-align: center;
+    border: none;
+}
+
+.uright_section img{
+    width: 50vw;
+    height: 100vh;
+    object-fit: cover   ;
+}
+
+
+/*Responsive navbar*/
+@media screen and (max-width: 850px) {
+    .navbar .links{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+
+    .first_page{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .uleft_section{
+        width: fit-content;
+        padding-top: 3rem;
+    }
+
+    .uright_section img{
+        height: 100%;
+        width: 100%;
+        padding: 40px 66px;
+        
+    }
+}
